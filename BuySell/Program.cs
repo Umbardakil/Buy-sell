@@ -119,6 +119,7 @@ namespace BuySell
                 }
                 else
                 {
+
                 }
                 // Method to display current prices of the commodities
                 static void displayList(Dictionary<string, int> list1, Dictionary<string, int> list2)
