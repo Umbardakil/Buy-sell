@@ -1,0 +1,16 @@
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.csproj.AssemblyReference.cache
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.AssemblyInfoInputs.cache
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.AssemblyInfo.cs
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.csproj.CoreCompileInputs.cache
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.exe
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.deps.json
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.runtimeconfig.json
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.runtimeconfig.dev.json
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.dll
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\ref\BuySell.dll
+C:\Users\patri\Desktop\dj\buySell\BuySell\bin\Debug\net5.0\BuySell.pdb
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.dll
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\ref\BuySell.dll
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.pdb
+C:\Users\patri\Desktop\dj\buySell\BuySell\obj\Debug\net5.0\BuySell.genruntimeconfig.cache
