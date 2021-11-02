@@ -1,46 +1,41 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public class Metalfruit
+public class Metalfruit : IComfruit, ICommetal
 {
     public int price { get; set; }
+    public List<Dictionary<string, int>> listOfDic { get; set; }
+    public Dictionary<string, int> dicMetal { get; set; }
+    public Dictionary<string, int> dicFruit { get; set; }
 
-    public int priceOf(List<Dictionary<string, int>> dicti, string userChoice)
+    Metals metal = new Metals();
+    Fruits fruit = new Fruits();
+
+
+    public Metalfruit()
     {
-        foreach (Dictionary<string, int> i in dicti)
+        listOfDic = new List<Dictionary<string, int>>();
+        dicMetal = new Dictionary<string, int>();
+        dicFruit = new Dictionary<string, int>();
+    }
+
+    public void dis()
+    {
+        foreach (KeyValuePair<string, int> i in dicFruit)
         {
-            foreach (KeyValuePair<string, int> k in i)
-            {
-                if (userChoice == k.Key)
-                {
-                    price = k.Value;
-                }
-            }
+            Console.WriteLine($"{i.Key} = {i.Value}");
+        }
+    }
+    public int priceOf(string k, string userChoice, int v)
+    {
+        if (k.Contains(userChoice))
+        {
+            price = v;
         }
         return price;
     }
 
-    public int priceOf(string userChoice, Dictionary<string, int> list)
-    {
-
-        foreach (KeyValuePair<string, int> i in list)
-        {
-            if (userChoice == i.Key)
-            {
-                price = i.Value;
-            }
-        }
-        return price;
-    }
-    // public int Fprice()
-    // {
-    //     fruit.priceOf();
-    // }
-
-    // public int Mprice()
-    // {
-    //     metal.priceOf;
-    // }
 
 
 }
