@@ -44,7 +44,6 @@ namespace BuySell
 
             // List of Commodity Dictinary
             Metalfruit metafru = new Metalfruit();
-
             metafru.dicMetal = metal.metals.Zip(metal.metPrices, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
             metafru.dicFruit = fruit.fruits.Zip(fruit.fruPrices, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
             metafru.listOfDic.Add(metafru.dicMetal);
@@ -70,19 +69,27 @@ namespace BuySell
                 Console.WriteLine("== choose from the list ==");
                 menu.ForEach(i => Console.WriteLine(i));
                 string usrChoice = Console.ReadLine();
+
+                // ==== Display All Commodities =====
                 if (usrChoice == "1")
                 {
                     metal.DisplayMetal();
                     fruit.DisplayFruit();
                 }
+
+                // ==== Display Inventory =====
                 else if (usrChoice == "2")
                 {
                     inventory.showInventory();
                 }
+
+                // ==== Display Balance =====
                 else if (usrChoice == "3")
                 {
                     balance.ShowBalance();
                 }
+
+                // ==== Buy item ======
                 else if (usrChoice == "4")
                 {
                     Console.WriteLine("Enter commodity name to buy: ");
@@ -117,6 +124,8 @@ namespace BuySell
                         Console.WriteLine("insufficient funds");
                     }
                 }
+
+                // ====== Sell item =====
                 else if (usrChoice == "5")
                 {
                     Console.WriteLine("Enter commodity name to sell: ");
@@ -143,6 +152,8 @@ namespace BuySell
                         }
                     }
                 }
+
+                // ====== End of turn ==== random change =====
                 else if (usrChoice == "6")
                 {
                     random.RandBigChange();
@@ -175,6 +186,7 @@ namespace BuySell
                     else
                     {
                         Console.WriteLine("insufficient funds YOU LOST!");
+                        break;
                     }
                 }
             }
