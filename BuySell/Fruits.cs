@@ -15,33 +15,18 @@ public class Fruits : IComfruit
     public int priceOfCommodity { get; set; }
     public int ind { get; set; }
 
-
-    // public int price { get; set; }
-
-
     public Fruits()
     {
-        // apple = appleA;
-        // orange = orangeA;
-        // melon = melonsA;
-        // grapefruit = grapefruitA;
-        // strawberrie = strawberrieA;
         listFruits = new Dictionary<string, int>();
         fruits = new List<string>();
         fruPrices = new List<int>();
     }
     public int priceOf(string userChoice)
     {
-
-
         ind = fruits.IndexOf(userChoice);
         priceOfCommodity = fruPrices[ind];
-
-
-
         return priceOfCommodity;
     }
-
     public void DisplayFruit()
     {
         foreach (string i in fruits)
@@ -49,22 +34,27 @@ public class Fruits : IComfruit
             foreach (int k in fruPrices)
             {
                 if (fruits.IndexOf(i) == fruPrices.IndexOf(k))
-                    Console.Write($"{i} = {k}£ ");
+                    Console.WriteLine($"{i} = {k}£ ");
             }
         }
     }
-    // public int priceOfFruit(string userChoice)
-    // {
 
-    //     foreach (KeyValuePair<string, int> i in listFruits)
-    //     {
-    //         if (userChoice == i.Key)
-    //         {
-    //             price = i.Value;
-    //         }
-    //     }
-    //     return price;
-    // }
+    public List<int> fruitPriceDec(int random)
+    {
+        for (int i = 0; i < fruPrices.Count; i++)
+        {
+            fruPrices[i] -= fruPrices[i] * random / 100;
+        }
+        return fruPrices;
+    }
+    public List<int> fruitPriceIncrese(int random)
+    {
+        for (int i = 0; i < fruPrices.Count; i++)
+        {
+            fruPrices[i] += fruPrices[i] * random / 100;
+        }
+        return fruPrices;
+    }
 }
 
 

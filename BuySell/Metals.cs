@@ -17,18 +17,10 @@ public class Metals : ICommetal
 
     public int priceOf(string userChoice)
     {
-
-
         ind = metals.IndexOf(userChoice);
         priceOfCommodity = metPrices[ind];
-
-
-
         return priceOfCommodity;
     }
-
-
-
     public Metals()
     {
 
@@ -65,35 +57,5 @@ public class Metals : ICommetal
         }
         return metPrices;
     }
-
-    // public Dictionary<string, int> DisplayNewDi(int rando)
-    // {
-    //     for (int i = 0; i < listMetals.Count; i++)
-    //     {
-
-
-    //         // KeyValuePair<string, int> entry = listMetals.ElementAt(i);
-    //         // item = entry.Value;
-    //         // Console.WriteLine(item);
-    //         // item += 1;
-    //         // (item * rando) / 100;
-
-    //     }
-    //     return listMetals;
-    // }
-
-    // public int priceOfMetal(string userChoice)
-    // {
-
-    //     foreach (KeyValuePair<string, int> i in listMetals)
-    //     {
-    //         if (userChoice == i.Key)
-    //         {
-    //             price = i.Value;
-    //         }
-
-    //     }
-    //     return price;
-    // }
 }
 

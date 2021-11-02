@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class Balance
 {
     public int balance { get; set; }
+    public int rent { get; set; }
 
 
 
@@ -25,6 +26,11 @@ public class Balance
     public int IncreaseBalance(int userQuantity, int increNum)
     {
         balance += increNum;
+        return balance;
+    }
+    public int rentCost()
+    {
+        balance -= rent;
         return balance;
     }
 }

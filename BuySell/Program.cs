@@ -55,10 +55,10 @@ namespace BuySell
             random.operatorList.Add('+');
             random.operatorList.Add('-');
 
-
             // balance
             Balance balance = new Balance();
             balance.balance = 400;
+            balance.rent = 60;
 
             while (true)
             {
@@ -141,42 +141,42 @@ namespace BuySell
                             inventory.quantity.Remove(inventory.quantity[index]);
                             inventory.inventory.Remove(inventory.inventory[index]);
                         }
-
                     }
-
                 }
                 else if (usrChoice == "6")
                 {
-                    random.RandNum();
+                    random.RandBigChange();
+                    random.RandSmallChange();
                     random.randomOperator();
 
                     if (random.randOperator == '+')
                     {
-                        metal.metalPriceIncrese(random.randNumber);
+                        metal.metalPriceIncrese(random.randBigNumber);
+                        fruit.fruitPriceIncrese(random.randSmallNumber);
+                        Console.WriteLine($"Prices of metals increased by {random.randBigNumber}% \n Prices of fruits increased by {random.randSmallNumber}% ");
                         metal.DisplayMetal();
+                        fruit.DisplayFruit();
                     }
                     else
                     {
-                        metal.metalPriceDec(random.randNumber);
+                        metal.metalPriceDec(random.randBigNumber);
+                        fruit.fruitPriceDec(random.randSmallNumber);
+                        Console.WriteLine($"Prices of metals Decreased by {random.randBigNumber}% \n Prices of fruits decreased by {random.randSmallNumber}% ");
+
                         metal.DisplayMetal();
+                        fruit.DisplayFruit();
                     }
 
+                    if (balance.balance > balance.rent)
+                    {
+                        balance.rentCost();
+                        Console.WriteLine($"Rent cost {balance.rent}£ was deducted from the balance,");
+                    }
+                    else
+                    {
+                        Console.WriteLine("insufficient funds YOU LOST!");
+                    }
                 }
-
-                // Method to display current prices of the commodities
-                // static void displayList(Dictionary<string, int> list1, Dictionary<string, int> list2)
-                // {
-                //     foreach (KeyValuePair<string, int> i in list1)
-                //     {
-                //         Console.Write($"{i.Key} = {i.Value}£ ");
-                //     }
-                //     Console.WriteLine("");
-                //     foreach (KeyValuePair<string, int> i in list2)
-                //     {
-                //         Console.Write($"{i.Key} = {i.Value}£ ");
-                //     }
-                //     Console.WriteLine("\n");
-                // }
             }
         }
     }
