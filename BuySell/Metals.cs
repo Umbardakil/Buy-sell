@@ -31,14 +31,9 @@ public class Metals : ICommetal
 
     public Metals()
     {
-        // gold = goldA;
-        // silver = silverA;
-        // iron = ironA;
-        // bronze = bronzeA;
-        // titanium = titaniumA;
+
         metals = new List<string>();
         metPrices = new List<int>();
-
         listMetals = new Dictionary<string, int>();
     }
 
@@ -52,6 +47,23 @@ public class Metals : ICommetal
                     Console.WriteLine($"{i} = {k}£ ");
             }
         }
+    }
+
+    public List<int> metalPriceDec(int random)
+    {
+        for (int i = 0; i < metPrices.Count; i++)
+        {
+            metPrices[i] -= metPrices[i] * random / 100;
+        }
+        return metPrices;
+    }
+    public List<int> metalPriceIncrese(int random)
+    {
+        for (int i = 0; i < metPrices.Count; i++)
+        {
+            metPrices[i] += metPrices[i] * random / 100;
+        }
+        return metPrices;
     }
 
     // public Dictionary<string, int> DisplayNewDi(int rando)

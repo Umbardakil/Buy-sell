@@ -50,7 +50,13 @@ namespace BuySell
             metafru.listOfDic.Add(metafru.dicMetal);
             metafru.listOfDic.Add(metafru.dicFruit);
 
-            // int balance;
+            // random 
+            Randoms random = new Randoms();
+            random.operatorList.Add('+');
+            random.operatorList.Add('-');
+
+
+            // balance
             Balance balance = new Balance();
             balance.balance = 400;
 
@@ -141,12 +147,22 @@ namespace BuySell
                 }
                 else if (usrChoice == "6")
                 {
-                    Random rand = new Random();
-                    int rando = rand.Next(0, 7);
+                    random.RandNum();
+                    random.randomOperator();
 
-
+                    if (random.randOperator == '+')
+                    {
+                        metal.metalPriceIncrese(random.randNumber);
+                        metal.DisplayMetal();
+                    }
+                    else
+                    {
+                        metal.metalPriceDec(random.randNumber);
+                        metal.DisplayMetal();
+                    }
 
                 }
+
                 // Method to display current prices of the commodities
                 // static void displayList(Dictionary<string, int> list1, Dictionary<string, int> list2)
                 // {
